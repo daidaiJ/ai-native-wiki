@@ -10,6 +10,9 @@
 | 📖 [03-rag-vector-db.md](03-rag-vector-db.md) | 2.3 前置：RAG 数据底座——Embedding 与向量库选型 |
 | 📖 [05-rag-evaluation.md](05-rag-evaluation.md) | 2.5 增强：RAG 质量评估——RAGAS 四指标 + CI 回归 |
 | 📖 [07-llm-security.md](07-llm-security.md) | 2.7 LLM 应用安全 |
+| 📖 [08-enterprise-agent-platform.md](08-enterprise-agent-platform.md) | 2.8 进阶：企业智能体平台方向认知——九个方向地图与入门择业 |
+| 📖 [09-rag-engineering.md](09-rag-engineering.md) | 2.9 工程实践：RAG 文档处理流水线——解析 / 切块 / 混合检索 / 重排 |
+| 📖 [10-ai-fit-evaluation.md](10-ai-fit-evaluation.md) | 2.10 AI 应用拟合评估——业务指标映射 + 上线验收 + 线上监控 |
 | 📋 2.1 / 2.2 / 2.4 / 2.6 | 规划中：架构模式 / 框架选型 / Agent 实战 / 协议与标准 |
 
 ## 核心特性

@@ -9,6 +9,8 @@
 |---|---|
 | 📖 [1.9 应用打包与分发：Helm 与 Kustomize](09-app-packaging.md) | 详解：Chart/values vs base/overlay 选型与使用，GitOps 前置 |
 | 📖 [1.10 企业云部署实践](10-enterprise-deploy-practices.md) | 详解：镜像预热 / Pod 快速启动治理 / 服务可用性配置规范 |
+| 📖 [1.11 发布策略与回滚实践认知](11-release-strategies.md) | 详解：滚动/蓝绿/金丝雀/灰度四策略对比、回滚设计、与 GitOps 的关系 |
+| 📖 [1.12 服务压测实践认知](12-load-testing.md) | 详解：压测方法论 / 工具认知 / AI 推理压测 / 用 AI 落实压测 |
 | 📖 [1.3 增强：Pod Security Admission](03a-pod-security.md) | 详解：PSA 三档安全级别与 Pod 被拒排障（1.3 配置与安全增强小节） |
 | 📋 1.1~1.8 章节 | 待写作：容器与镜像 / 核心概念 / 配置与安全 / 多容器 Pod / Pod 设计 / 服务与网络 / 状态持久化 / 可观测性 |
 

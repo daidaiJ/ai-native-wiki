@@ -10,9 +10,11 @@
 ## 快速导航表
 | 文档 | 说明 |
 |---|---|
+| [03-gpu-scheduling.md](03-gpu-scheduling.md) | 📖 详解 · **3.3 实用**：GPU 资源申请与调度认知 |
 | [04-gpu-observability-cost.md](04-gpu-observability-cost.md) | 📖 详解 · **3.4 增强**：GPU 指标接入与成本分摊 |
 | [05-llm-gateway.md](05-llm-gateway.md) | 📖 详解 · 3.5 LLM 网关与成本治理 |
-| 3.1 部署模式 / 3.2 推理服务 / 3.3 GPU 资源管理 | 规划中（待写） |
+| [06-inference-serving.md](06-inference-serving.md) | 📖 详解 · 3.6 推理服务选型与部署实践认知 |
+| 3.1 部署模式 / 3.2 推理服务 | 规划中（待写） |
 
 ## 核心特性块
 - ✅ 把 GPU 指标接进 Prometheus，按 namespace / Pod 维度看利用率

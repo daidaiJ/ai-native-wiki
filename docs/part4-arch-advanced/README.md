@@ -10,8 +10,11 @@
 ## 快速导航表
 | 文档 | 说明 |
 |---|---|
+| [02-observability.md](02-observability.md) | 📖 详解 · **4.2 可观测性接入**：业务应用接入 OTel / Prometheus / Grafana（埋点、指标、日志、追踪），从指标到 SLO |
 | [06-k8s-extension.md](06-k8s-extension.md) | 📖 详解 · **4.6 增强**：K8s 二开适配速查（client-go / CRD / Operator 使用者路线） |
-| 4.1 云原生设计模式 / 4.2 可观测性接入 / 4.3 GitOps 交付 / 4.4 平台能力边界 / 4.5 平台工程使用者视角 / 4.7 架构决策方法 | 规划中（待写） |
+| [08-gitops-delivery.md](08-gitops-delivery.md) | 📖 详解 · **4.8 进阶**：GitOps 交付实践认知（ArgoCD/Flux 对比、多环境管理、渐进式交付、CI 分工） |
+| [07-tech-selection.md](07-tech-selection.md) | 📖 详解 · **4.7 增强**：技术选型与架构演进方法论（选型框架 / 权衡分析 / 演进式架构） |
+| 4.1 云原生设计模式 / 4.3 GitOps 交付 / 4.4 平台能力边界 / 4.5 平台工程使用者视角 | 规划中（待写） |
 
 ## 核心特性块
 - ✅ 用 client-go 三套姿势按场景选型：一次性 List/Get、Watch + Informer、Dynamic client
