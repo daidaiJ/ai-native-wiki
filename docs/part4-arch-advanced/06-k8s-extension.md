@@ -64,6 +64,27 @@ kubectl explain <resource>.spec  # 查字段定义
 - Operator 判断力：很多「想写 Operator」的场景一个 CronJob 就够——Operator 的价值在「状态驱动的自愈」，一次性任务不是
 - 读 CRD 先看 spec 再看 status：spec 是用户声明（我要什么），status 是平台回写（对账结果）
 
+### 部署 CRD 前要确认的限制（认知清单 + AI 沟通要点）
+
+**认知要点（先建立意识）**：CRD 不是「随便建个资源类型」——它挂在集群 API 链路上，部署前不确认限制，上线后可能影响整个集群：
+
+| 确认项 | 为什么重要 | 常见坑 |
+|---|---|---|
+| API 版本 | CRD 必须 v1（v1beta1 已废弃） | 旧 chart 带 v1beta1 直接部署失败 |
+| scope | Namespaced vs Cluster——Cluster 级 CR 影响全集群 | 误用 Cluster 级导致权限面过大 |
+| 存储与规模 | CR 存在 etcd，单 CR 有 1.5MB 限制（etcd 默认），大量 CR 拖慢 apiserver | 把 CR 当数据库用 |
+| webhook 依赖 | 校验/转换 webhook 是强依赖：挂了全集群对应操作阻塞 | 接入前问平台方「高可用谁保障」 |
+| RBAC | 谁可以读写这个 CR——最小权限 | 默认给 cluster-admin |
+| finalizer | 删除 CR 时 finalizer 阻塞，controller 不清理就删不掉 | 删不掉先查 finalizer |
+| 大规模 CR | 大量 CR + 频繁更新 = apiserver/etcd 压力 | 高频状态写入不适合 CRD |
+
+**和 AI 沟通的提问要点**：向 AI 咨询 CRD/Operator 设计时，提供这些信息才能得到有效建议：
+
+- CR 的预期规模与写入频率（决定是否适合 CRD，还是用 ConfigMap/独立存储）
+- 是否依赖 webhook（校验/转换），高可用谁保障
+- 删除语义（是否需要 finalizer 清理外部资源）
+- 谁消费这些 CR（controller 数量、是否跨 namespace）
+
 ## CKAD 考点对照
 
 无（Part 4 不在 CKAD 范围内）。
