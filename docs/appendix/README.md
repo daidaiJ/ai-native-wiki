@@ -38,8 +38,10 @@ flowchart LR
     B -->|贡献新来源| E[附录 B 贡献三步]
     B -->|术语不懂| F[附录 C 术语表 规划中]
     B -->|找书/社区/工具| G[附录 D 资源清单 规划中]
-    classDef core fill:#e3f2fd,stroke:#90caf9; classDef plan fill:#fce4ec,stroke:#f48fb1
-    class A,D core; class F,G plan
+    classDef core fill:#e3f2fd,stroke:#90caf9
+    classDef plan fill:#fce4ec,stroke:#f48fb1
+    class A,D core
+    class F,G plan
 ```
 
 ## 业务场景映射
