@@ -8,6 +8,7 @@
 | 文档 | 说明 |
 |---|---|
 | 📖 [1.9 应用打包与分发：Helm 与 Kustomize](09-app-packaging.md) | 详解：Chart/values vs base/overlay 选型与使用，GitOps 前置 |
+| 📖 [1.10 企业云部署实践](10-enterprise-deploy-practices.md) | 详解：镜像预热 / Pod 快速启动治理 / 服务可用性配置规范 |
 | 📖 [1.3 增强：Pod Security Admission](03a-pod-security.md) | 详解：PSA 三档安全级别与 Pod 被拒排障（1.3 配置与安全增强小节） |
 | 📋 1.1~1.8 章节 | 待写作：容器与镜像 / 核心概念 / 配置与安全 / 多容器 Pod / Pod 设计 / 服务与网络 / 状态持久化 / 可观测性 |
 
