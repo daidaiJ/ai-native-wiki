@@ -47,6 +47,29 @@ images:
 
 > 验证环境：待验证。以上命令与 YAML 发布前须在本地 kind 集群跑通。
 
+### Helm 核心教程引导（日常操作速查 + 进阶路径）
+
+**入门三步**（上方动手已覆盖）：`helm create` 生成骨架 → `helm upgrade --install` 幂等发布 → `helm rollback` 回退。日常使用只需掌握下面这张速查表：
+
+| 场景 | 命令 | 说明 |
+|---|---|---|
+| 首次/重复部署 | `helm upgrade --install <release> <chart> -n <ns> --create-namespace` | 幂等，日常唯一入口（不用 `helm install`） |
+| 查看发布列表 | `helm list -n <ns>` | 看 release 状态（deployed / failed） |
+| 查看发布详情 | `helm status <release> -n <ns>` | 含 manifest 摘要与状态 |
+| 升级前预检 | `helm template <release> <chart> \| kubectl apply --dry-run=server -f -` | 先看到最终 YAML 再进集群 |
+| 升级前看差异 | `helm diff upgrade <release> <chart> -n <ns>` | 需 diff 插件，逐行差异防盲发 |
+| 查生效配置 | `helm get values <release> --revision N -n <ns>` | 某次发布实际生效的配置 |
+| 回退 | `helm rollback <release> <版本号> -n <ns>` | 出问题秒级回退 |
+| 卸载 | `helm uninstall <release> -n <ns>` | 清理 release |
+
+**进阶引导（学习者自己深入）**：
+
+- Chart 模板语法（values / 模板函数 / 子 chart）：官方文档 Chart Template Guide——先会改 values，再学模板
+- Chart 仓库与 OCI 分发：`helm repo add` / `helm pull`；上 Artifact Hub 找现成 chart 拆开学习写法
+- 依赖管理：Chart.yaml 的 `dependencies`（多组件应用）
+- 生产实践：chart 版本化、values 分层（环境差异用 `values-<env>.yaml`）、CI 里 `helm lint` + template 校验
+- 学习路径：官方文档 https://helm.sh/docs/ 按「Getting Started → Chart Template Guide → Advanced」顺序推进
+
 ## 实用技巧
 
 - `helm diff` 插件（`helm plugin install ...`）：升级前看逐行差异，防止盲发
