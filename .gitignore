@@ -1,0 +1,12 @@
+# AI 工具记忆与缓存（不随项目提交）
+.qwen/
+.codebuddy/
+.workbuddy/
+graphify-out/
+
+# 系统与 IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
