@@ -13,8 +13,8 @@
 | [03-gpu-scheduling.md](03-gpu-scheduling.md) | 📖 详解 · **3.3 实用**：GPU 资源申请与调度认知 |
 | [04-gpu-observability-cost.md](04-gpu-observability-cost.md) | 📖 详解 · **3.4 增强**：GPU 指标接入与成本分摊 |
 | [05-llm-gateway.md](05-llm-gateway.md) | 📖 详解 · 3.5 LLM 网关与成本治理 |
-| [06-inference-serving.md](06-inference-serving.md) | 📖 详解 · 3.6 推理服务选型与部署实践认知 |
-| 3.1 部署模式 / 3.2 推理服务 | 规划中（待写） |
+| [06-inference-serving.md](06-inference-serving.md) | 📖 详解 · 3.6 推理服务选型与部署实践认知（对应大纲 3.2） |
+| 3.1 部署模式 | 规划中（待写） |
 
 ## 核心特性块
 - ✅ 把 GPU 指标接进 Prometheus，按 namespace / Pod 维度看利用率
@@ -29,16 +29,17 @@
 | Prometheus 指标与 Grafana 看板 | Part 1.8 可观测性基础 | GPU 指标接入与看板 |
 | Deployment / DaemonSet / Service | Part 1.2 核心概念 | 部署 dcgm-exporter 与网关 |
 | LLM 应用架构模式（RAG / Agent） | Part 2.1 | 理解 token 成本从哪来 |
-| OpenAI 兼容 API | Part 2.2 / 3.2 | 网关统一端点，业务代码零改动 |
+| OpenAI 兼容 API | Part 2.2 / 3.6 | 网关统一端点，业务代码零改动 |
 
 ## 学习路线图
 ```mermaid
 flowchart LR
-    A["3.1 部署模式<br/>（规划中）"] --> B["3.2 推理服务<br/>（规划中）"]
-    B --> C["3.3 GPU 资源管理<br/>（规划中）"]
+    A["3.1 部署模式<br/>（规划中）"] --> B["3.2 推理服务<br/>见 3.6"]
+    B --> C["3.3 GPU 资源管理<br/>03-gpu-scheduling.md"]
     C --> D["3.4 可观测与成本<br/>04-gpu-observability-cost.md"]
     D --> E["3.5 LLM 网关<br/>05-llm-gateway.md"]
     E --> F["lab3 AI 应用上云"]
+    style C fill:#e3f2fd
     style D fill:#e3f2fd
     style E fill:#e3f2fd
     style F fill:#fff3e0

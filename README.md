@@ -27,12 +27,21 @@
 ```
 docs/part0-intro/          转型导论（规划中）
 docs/part1-cloud-native/   云原生基础（CKAD 全覆盖）[实用]
+  ├─ 1.3 增强 PSA 安全档位 · 1.9 应用打包（Helm/Kustomize）
+  ├─ 1.10 企业部署实践（镜像预热/Pod 启动/可用性）
+  ├─ 1.11 发布策略与回滚（蓝绿/金丝雀/灰度）· 1.12 服务压测
 docs/part2-llm-apps/       LLM 应用开发（RAG/Agent/评估/安全）[实用]
+  ├─ 2.3 向量库选型 · 2.5 RAGAS 评估 · 2.7 LLM 安全
+  ├─ 2.8 企业智能体平台方向 · 2.9 RAG 工程实践 · 2.10 拟合评估
 docs/part3-ai-on-k8s/      AI 应用上云（推理/GPU/网关/成本）[实用]
+  ├─ 3.3 GPU 申请与调度 · 3.4 GPU 成本 · 3.5 LLM 网关 · 3.6 推理选型
 docs/part4-arch-advanced/  云原生架构进阶（模式/GitOps/二开适配）[进阶]
+  ├─ 4.2 可观测接入 · 4.6 二开速查 · 4.7 技术选型 · 4.8 GitOps 交付
 docs/part5-ai-arch/        AI 架构进阶（规划中）[进阶]
 docs/part6-architect/      架构师修炼（ADR/SLO/案例研读）[进阶]
+  ├─ 6.1 ADR 模板 · 6.2 SLO 模板 · 6.3 案例研读
 docs/appendix/             附录（CKAD 备考/知识检索手册/术语表）
+  ├─ A CKAD 三件套 · B 与检索手册的关系
 ```
 
 标注：**[实用]** = 主线必学；**[进阶]** = 支线按需。每章结构：章 README 概览 → 正文详解（概念→动手→实用技巧→考察问题→经验之谈→架构师视角）→ 章尾收束（核心收获/推荐项目/排查）。
